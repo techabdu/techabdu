@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import React, { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -57,7 +57,7 @@ export default function ScrollReveal({
     }, { scope: containerRef, dependencies: [delay] })
 
     // Use dynamic component based on 'as' prop
-    const Wrapper = Component as keyof JSX.IntrinsicElements
+    const Wrapper = Component as React.ElementType
 
     return (
         <Wrapper ref={containerRef as React.RefObject<HTMLElement>} className={className}>
