@@ -29,6 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className="font-sans antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 px-6 py-3 bg-background text-foreground border border-border rounded-lg shadow-lg font-medium outline-none text-small"
+        >
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>
